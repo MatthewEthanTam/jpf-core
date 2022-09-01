@@ -1,0 +1,6 @@
+target = ConnectionPool
+
+report.console.property_violation=error,snapshot,trace
+search.properties=\gov.nasa.jpf.vm.NotDeadlockedProperty
+cg.randomize_choices = VAR_SEED
+cg.max_processors=2
