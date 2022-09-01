@@ -356,3 +356,20 @@ class DatabaseConnectionPool {
     }
 
 }
+
+public class ConnectionPool {
+    /**
+     * @param args
+     * @throws DatabaseException
+     */
+    public static void main (String[] args) throws DatabaseException {
+        DatabaseConnectionPool Pool1 = new DatabaseConnectionPool("pool1", "jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger", 10, 5);
+        DatabaseConnectionPool Pool2 = new DatabaseConnectionPool("pool2", "jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger", 10, 5);
+        DatabaseConnection dc1 = new DatabaseConnection("driver1", "url1", "user1", "password1", "name1");
+        DatabaseConnection dc2 = new DatabaseConnection("driver2", "url2", "user2", "password2", "name2");
+        Pool1.distributeConnection(dc1);
+        Pool2.distributeConnection(dc2);
+        Pool1.distributeConnection(dc2);
+        Pool2.distributeConnection(dc1);
+    }
+}
