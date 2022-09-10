@@ -1,0 +1,7 @@
+target = DBDriverMatthewTam
+
+report.console.property_violation=error,snapshot,trace
+search.class = .search.heuristic.BFSHeuristic
+cg.randomize_choices = VAR_SEED
+cg.max_processors=1
+vm.max_transition_length = 100
