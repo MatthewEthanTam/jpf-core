@@ -1,0 +1,4 @@
+target = DBDriverMatthewTam
+search.class = .search.heuristic.BFSHeuristic
+cg.randomize_choices = VAR_SEED
+search.depth_limit = 50
